@@ -1,6 +1,7 @@
 require 'rails/railtie'
+require 'action_controller'
+require 'active_support'
 
-require 'jsonapi/rails/log_subscriber'
 require 'jsonapi/rails/renderer'
 
 module JSONAPI
@@ -51,7 +52,7 @@ module JSONAPI
               # Renderer proc is evaluated in the controller context.
               self.content_type ||= Mime[:jsonapi]
 
-              ActiveSupport::Notifications.instrument('render.jsonapi-rails',
+              ActiveSupport::Notifications.instrument('render.jsonapi',
                                                       resources: resources,
                                                       options: options) do
                 renderer.render(resources, options, self).to_json
