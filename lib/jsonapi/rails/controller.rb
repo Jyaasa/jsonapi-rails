@@ -87,7 +87,8 @@ module JSONAPI
                   # controller.params[key.to_sym] = resource.to_hash
                 end
                 controller.request.env[JSONAPI_POINTERS_KEY] =
-                key = key.to_s + 's'
+                  puts key
+                # key = key.to_s + 's'
                 controller.params[key.to_sym] = array
               end
             end
