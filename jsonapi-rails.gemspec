@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.require_path  = 'lib'
 
   spec.add_dependency 'jsonapi-rb', '~> 0.5.0'
-  spec.add_dependency 'jsonapi-parser', git: 'git@github.com:Jyaasa/jsonapi-parser'
+  spec.add_dependency 'jsonapi-parser', '~> 0.1.0'
 
   spec.add_development_dependency 'rails', '~> 5.0'
   spec.add_development_dependency 'sqlite3'
